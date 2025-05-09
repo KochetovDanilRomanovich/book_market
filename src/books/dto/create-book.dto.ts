@@ -1,7 +1,13 @@
-import { IsString, IsNotEmpty, IsNumber, IsPositive, IsInt } from "class-validator";
-import { Transform } from "class-transformer";
+import {
+  IsString,
+  IsNotEmpty,
+  IsNumber,
+  IsPositive,
+  IsInt,
+} from 'class-validator';
+import { Transform } from 'class-transformer';
 
-export class CreateBookDto {   
+export class CreateBookDto {
   @IsString()
   @IsNotEmpty()
   @Transform(({ value }) => value.trim())
@@ -10,7 +16,7 @@ export class CreateBookDto {
   @IsNumber()
   @IsPositive()
   @Transform(({ value }) => parseFloat(value))
-  price: number; 
+  price: number;
 
   @IsNumber()
   @IsPositive()

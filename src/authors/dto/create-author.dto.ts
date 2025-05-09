@@ -1,8 +1,8 @@
-import { IsString } from "class-validator";
-import { Transform } from "class-transformer";
+import { IsString } from 'class-validator';
+import { Transform } from 'class-transformer';
 
 export class CreateAuthorDto {
-    @IsString()
-    @Transform(({ value }) => value.trim())
-    author_name: string;
+  @IsString()
+  @Transform(({ value }) => value.trim())
+  author_name: string;
 }

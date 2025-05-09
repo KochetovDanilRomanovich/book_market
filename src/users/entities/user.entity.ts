@@ -1,6 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, Index, OneToMany, CreateDateColumn } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  Index,
+  OneToMany,
+  CreateDateColumn,
+} from 'typeorm';
 import { IsEmail, IsString, MinLength, Matches } from 'class-validator';
-import { Order } from 'src/orders/entities/order.entity';
+import { Order } from '../../orders/entities/order.entity';
 
 @Entity()
 export class User {
@@ -46,4 +53,3 @@ export class User {
   @OneToMany(() => Order, (order) => order.user)
   orders: Order[];
 }
-

@@ -10,16 +10,15 @@ import { OrderItemsModule } from './order_items/order_items.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppDataSource } from './data-source';
 
-
 @Module({
   imports: [
     TypeOrmModule.forRoot(AppDataSource.options),
-    BooksModule, 
-    AuthorsModule, 
-    GenresModule, 
-    UsersModule, 
-    OrdersModule, 
-    OrderItemsModule
+    BooksModule,
+    AuthorsModule,
+    GenresModule,
+    UsersModule,
+    OrdersModule,
+    OrderItemsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

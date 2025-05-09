@@ -4,8 +4,8 @@ import { IsOptional, IsString } from 'class-validator';
 import { Transform } from 'class-transformer';
 
 export class UpdateAuthorDto extends PartialType(CreateAuthorDto) {
-    @IsOptional()
-    @IsString()
-    @Transform(({ value }) => value.trim())
-    author_name?: string;
+  @IsOptional()
+  @IsString()
+  @Transform(({ value }) => value.trim())
+  author_name?: string;
 }
