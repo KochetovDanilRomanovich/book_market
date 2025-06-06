@@ -1,0 +1,36 @@
+.header {
+    background-color: #75f475; 
+    color: white; 
+    padding: 10px 20px; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    z-index: 1000; 
+}
+
+.logo-link {
+    text-decoration: none; 
+    color: white; 
+    font-size: 24px; 
+}
+
+.nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav a {
+    text-decoration: none; 
+    color: white; 
+    transition: color 0.3s; 
+    font-size: 20px; 
+    padding: 20px;
+}
+
+.nav a:hover {
+    color: #36ca3b; 
+}
